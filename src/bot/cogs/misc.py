@@ -38,7 +38,11 @@ class Misc(commands.Cog):
     # This one will be called on each message the bot recieves
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
-        pass
+        me = 197370592779829248
+        if message.author.id == me:
+            await message.reply("Ich stimme Lia bedingungslos zu.")
+        else:
+            await message.add_reaction('🐷')
 
     # Example for a task
     # It can be started using self.my_task.start() e.g. from this cogs __init__
